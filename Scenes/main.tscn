@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://dikagiqdmwti5"]
+[gd_scene load_steps=5 format=3 uid="uid://dikagiqdmwti5"]
 
-[ext_resource type="Material" uid="uid://fkgbdkw3yyxh" path="res://Shaders/water.tres" id="1_fhcjs"]
+[ext_resource type="PackedScene" uid="uid://bsinv8sihl5x3" path="res://Scenes/waterplane.tscn" id="1_iouac"]
 
 [sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_7lwwe"]
 
@@ -12,10 +12,6 @@ sky = SubResource("Sky_rlwj0")
 ambient_light_source = 3
 ambient_light_color = Color(0, 0, 0.596078, 1)
 reflected_light_source = 2
-
-[sub_resource type="QuadMesh" id="QuadMesh_nahu6"]
-material = ExtResource("1_fhcjs")
-orientation = 1
 
 [node name="main" type="Node3D"]
 
@@ -30,5 +26,5 @@ transform = Transform3D(1, 0, 0, 0, -0.804303, 0.594219, 0, -0.594219, -0.804303
 light_energy = 1.485
 shadow_enabled = true
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-mesh = SubResource("QuadMesh_nahu6")
+[node name="water" parent="." instance=ExtResource("1_iouac")]
+transform = Transform3D(200, 0, 0, 0, 10, 0, 0, 0, 200, 0, 0, 0)
