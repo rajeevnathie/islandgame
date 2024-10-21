@@ -7,6 +7,6 @@ subdivide_width = 200
 subdivide_depth = 200
 orientation = 1
 
-[node name="MeshInstance3D" type="MeshInstance3D"]
+[node name="water" type="MeshInstance3D"]
 mesh = SubResource("QuadMesh_1efjm")
 surface_material_override/0 = ExtResource("1_me7b0")
