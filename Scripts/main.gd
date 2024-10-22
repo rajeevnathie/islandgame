@@ -9,8 +9,6 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
-	
-
 
 func instantiateIsland():
 	var instance = npc_island.instantiate()
@@ -23,3 +21,4 @@ func randomiseIsland(island : Island):
 	var rng = RandomNumberGenerator.new()
 	
 	island.changeSize(Vector3(rng.randf_range(1.0, 10.0), 0.2, randf_range(1.0, 10.0)))
+
