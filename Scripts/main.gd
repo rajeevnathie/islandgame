@@ -1,10 +1,10 @@
 extends Node3D
 
-var island = preload("res://Scripts/island.gd")
+var npc_island = preload("res://Scenes/npc_island.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	instantiateIsland()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -12,4 +12,7 @@ func _process(delta: float) -> void:
 	pass
 
 
-func instantiateIsland
+func instantiateIsland():
+	var instance = npc_island.instantiate()
+	print("added island")
+	add_child(instance)
