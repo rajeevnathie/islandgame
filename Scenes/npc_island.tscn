@@ -12,6 +12,7 @@
 script = ExtResource("1_e4a0j")
 
 [node name="RigidBody3D" type="RigidBody3D" parent="."]
+gravity_scale = 0.0
 metadata/_edit_group_ = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
