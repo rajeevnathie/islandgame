@@ -1,3 +1,24 @@
-[gd_scene format=3 uid="uid://36svhvwe4bs5"]
+[gd_scene load_steps=6 format=3 uid="uid://36svhvwe4bs5"]
+
+[ext_resource type="Script" path="res://Scripts/NpcIslandScripts/island.gd" id="1_e4a0j"]
+[ext_resource type="Script" path="res://Scripts/NpcIslandScripts/collision_shape_3d.gd" id="2_bm3oq"]
+[ext_resource type="Script" path="res://Scripts/NpcIslandScripts/mesh_instance_3d.gd" id="3_3lern"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_26s78"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_3k2ib"]
 
 [node name="NpcIsland" type="Node3D"]
+script = ExtResource("1_e4a0j")
+
+[node name="RigidBody3D" type="RigidBody3D" parent="."]
+gravity_scale = 0.0
+metadata/_edit_group_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+shape = SubResource("BoxShape3D_26s78")
+script = ExtResource("2_bm3oq")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D"]
+mesh = SubResource("BoxMesh_3k2ib")
+script = ExtResource("3_3lern")
