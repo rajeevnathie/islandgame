@@ -1,0 +1,33 @@
+[gd_scene load_steps=2 format=3 uid="uid://m3ddbkxt74kn"]
+
+[ext_resource type="Script" path="res://Scenes/UI/hud.gd" id="1_awqje"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_awqje")
+
+[node name="TimeLabel" type="Label" parent="."]
+offset_left = 1050.0
+offset_top = 6.0
+offset_right = 1102.0
+offset_bottom = 29.0
+
+[node name="SlowerButton" type="Button" parent="."]
+offset_left = 966.0
+offset_top = 1.0
+offset_right = 984.0
+offset_bottom = 22.0
+text = "<|"
+
+[node name="PauseButton" type="Button" parent="."]
+offset_left = 991.0
+offset_top = 1.0
+offset_right = 1018.0
+offset_bottom = 32.0
+text = "||"
+
+[node name="FasterButton" type="Button" parent="."]
+offset_left = 1017.0
+offset_top = 1.0
+offset_right = 1043.0
+offset_bottom = 32.0
+text = "|>"
