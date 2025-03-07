@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://dikagiqdmwti5"]
+[gd_scene load_steps=7 format=3 uid="uid://dikagiqdmwti5"]
 
 [ext_resource type="PackedScene" uid="uid://bsinv8sihl5x3" path="res://Scenes/waterplane.tscn" id="1_iouac"]
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_udppq"]
+[ext_resource type="PackedScene" uid="uid://m3ddbkxt74kn" path="res://Scenes/UI/hud.tscn" id="3_ybqp0"]
 
 [sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_7lwwe"]
 
@@ -30,3 +31,5 @@ shadow_enabled = true
 
 [node name="water" parent="." instance=ExtResource("1_iouac")]
 transform = Transform3D(200, 0, 0, 0, 10, 0, 0, 0, 200, 0, 0, 0)
+
+[node name="CanvasLayer" parent="." instance=ExtResource("3_ybqp0")]
