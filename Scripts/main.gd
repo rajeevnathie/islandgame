@@ -18,3 +18,4 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 	
+	print(GlobalVariables.passed_time)

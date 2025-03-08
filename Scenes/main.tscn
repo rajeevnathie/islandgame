@@ -24,7 +24,7 @@ tree_manager = ExtResource("2_sttgr")
 environment = SubResource("Environment_ujosf")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.92595, 0.377647, 0, -0.377647, 0.92595, 0, 2.84115, 4.89779)
+transform = Transform3D(1, 0, 0, 0, 0.92595, 0.377647, 0, -0.377647, 0.92595, 0, 5.55276, 8.7607)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -0.804303, 0.594219, 0, -0.594219, -0.804303, -1.31774, 18.1793, -6.54672)
