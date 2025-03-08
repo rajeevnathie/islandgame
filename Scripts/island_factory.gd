@@ -3,7 +3,7 @@ extends Node
 var npc_island = preload("res://Scenes/npc_island.tscn")
 var rng = RandomNumberGenerator.new()
 var last_checked_time: int = 0
-var spawn_frequency: int = 5
+var spawn_frequency: int = 10
 
 
 func _process(delta: float) -> void:
@@ -28,4 +28,4 @@ func randomiseIslandSize():
 
 func randomiseIslandLoc():
 	#todo: check for collision on spawn
-	return Vector3(rng.randf_range(1.0, 20.0), 1, randf_range(1.0, 20.0))
+	return Vector3(rng.randf_range(1.0, 100.0), 0, randf_range(1.0, 100.0))

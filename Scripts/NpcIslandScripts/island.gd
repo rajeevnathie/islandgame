@@ -10,6 +10,7 @@ class_name Island
 }
 @export var tree_manager : PackedScene
 
+
 #@export var climate : int
 #@export var terrain : int
 #@export var moisture : int
@@ -20,8 +21,11 @@ class_name Island
 
 func _ready() -> void:
 	var tree_manager_instance = tree_manager.instantiate()
-	add_child(tree_manager_instance)
 	tree_manager_instance.island_instance = self
+	add_child(tree_manager_instance)
+
+#func _process(delta: float) -> void:
+	#print(self.get_children())
 
 func changeSize(size: Vector3):
 	islandFloorMesh.scale = size
