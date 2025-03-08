@@ -4,14 +4,16 @@ extends Node3D
 @export var max_num_trees : int = 15
 
 var tree_amount := 0
-var last_tree_spawned_time := 0.0
+var last_tree_spawned_time := 0
+var island_amounts = 0
 
 var island_instance : Node3D
 var island_size : Vector3
 
+
 const MAX_TREES := 15
 
-func _ready():
+func _ready() -> void:
 	if island_instance:
 		island_size = island_instance.getSize()
 
@@ -20,7 +22,7 @@ func _process(delta: float) -> void:
 		place_trees_on_island()
 
 func place_trees_on_island():
-	if GlobalVariables.passed_time - last_tree_spawned_time >= 5.0:
+	if GlobalVariables.passed_time - last_tree_spawned_time >= 5:
 		print('Placing tree')
 		last_tree_spawned_time = GlobalVariables.passed_time
 		var x_pos = randf_range(-island_size.x / 2, island_size.x / 2)
