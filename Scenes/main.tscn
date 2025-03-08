@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bsinv8sihl5x3" path="res://Scenes/waterplane.tscn" id="1_iouac"]
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_udppq"]
-[ext_resource type="PackedScene" uid="uid://c8t5jgrnreown" path="res://Scenes/tree_manager.tscn" id="2_sttgr"]
+[ext_resource type="PackedScene" uid="uid://bda1tf02hcfwv" path="res://Scenes/tree_manager.tscn" id="2_sttgr"]
 [ext_resource type="PackedScene" uid="uid://m3ddbkxt74kn" path="res://Scenes/UI/hud.tscn" id="3_ybqp0"]
 
 [sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_7lwwe"]
