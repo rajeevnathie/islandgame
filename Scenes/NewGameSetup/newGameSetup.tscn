@@ -1,0 +1,166 @@
+[gd_scene load_steps=2 format=3 uid="uid://ugl4bviggp8r"]
+
+[ext_resource type="Script" path="res://Scenes/NewGameSetup/new_game_setup.gd" id="1_ykqtb"]
+
+[node name="NewGameSetup" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ykqtb")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 0
+offset_right = 1156.0
+offset_bottom = 646.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="ClimateContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/ClimateContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Hot"
+
+[node name="Climate" type="HSlider" parent="CenterContainer/VBoxContainer/ClimateContainer"]
+custom_minimum_size = Vector2(300, 70)
+layout_mode = 2
+min_value = -100.0
+
+[node name="Label2" type="Label" parent="CenterContainer/VBoxContainer/ClimateContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Cold"
+horizontal_alignment = 2
+
+[node name="TerrainContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/TerrainContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Fertile"
+
+[node name="Terrain" type="HSlider" parent="CenterContainer/VBoxContainer/TerrainContainer"]
+custom_minimum_size = Vector2(300, 70)
+layout_mode = 2
+min_value = -100.0
+
+[node name="Label2" type="Label" parent="CenterContainer/VBoxContainer/TerrainContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Rocky"
+horizontal_alignment = 2
+
+[node name="MoistureContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/MoistureContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Wet"
+
+[node name="Moisture" type="HSlider" parent="CenterContainer/VBoxContainer/MoistureContainer"]
+custom_minimum_size = Vector2(300, 70)
+layout_mode = 2
+min_value = -100.0
+
+[node name="Label2" type="Label" parent="CenterContainer/VBoxContainer/MoistureContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Dry"
+horizontal_alignment = 2
+
+[node name="GeoStabilContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/GeoStabilContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Stable"
+
+[node name="GeologicalStability" type="HSlider" parent="CenterContainer/VBoxContainer/GeoStabilContainer"]
+custom_minimum_size = Vector2(300, 70)
+layout_mode = 2
+min_value = -100.0
+
+[node name="Label2" type="Label" parent="CenterContainer/VBoxContainer/GeoStabilContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Volatile"
+horizontal_alignment = 2
+
+[node name="BiodiversityContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/BiodiversityContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Simple"
+
+[node name="Biodiversity" type="HSlider" parent="CenterContainer/VBoxContainer/BiodiversityContainer"]
+custom_minimum_size = Vector2(300, 70)
+layout_mode = 2
+min_value = -100.0
+
+[node name="Label2" type="Label" parent="CenterContainer/VBoxContainer/BiodiversityContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Complex"
+horizontal_alignment = 2
+
+[node name="EleEnergyContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/EleEnergyContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Scarcity"
+
+[node name="ElementalEnergy" type="HSlider" parent="CenterContainer/VBoxContainer/EleEnergyContainer"]
+custom_minimum_size = Vector2(300, 70)
+layout_mode = 2
+min_value = -100.0
+
+[node name="Label2" type="Label" parent="CenterContainer/VBoxContainer/EleEnergyContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Abundance"
+horizontal_alignment = 2
+
+[node name="SuccessionStageContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/SuccessionStageContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Early"
+
+[node name="SuccessionStage" type="HSlider" parent="CenterContainer/VBoxContainer/SuccessionStageContainer"]
+custom_minimum_size = Vector2(300, 70)
+layout_mode = 2
+min_value = -100.0
+
+[node name="Label2" type="Label" parent="CenterContainer/VBoxContainer/SuccessionStageContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Mature"
+horizontal_alignment = 2
+
+[node name="startGame" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "Start Game!"
+
+[connection signal="drag_ended" from="CenterContainer/VBoxContainer/ClimateContainer/Climate" to="." method="_on_climate_drag_ended"]
+[connection signal="drag_ended" from="CenterContainer/VBoxContainer/TerrainContainer/Terrain" to="." method="_on_terrain_drag_ended"]
+[connection signal="drag_ended" from="CenterContainer/VBoxContainer/MoistureContainer/Moisture" to="." method="_on_moisture_drag_ended"]
+[connection signal="drag_ended" from="CenterContainer/VBoxContainer/GeoStabilContainer/GeologicalStability" to="." method="_on_geological_stability_drag_ended"]
+[connection signal="drag_ended" from="CenterContainer/VBoxContainer/BiodiversityContainer/Biodiversity" to="." method="_on_biodiversity_drag_ended"]
+[connection signal="drag_ended" from="CenterContainer/VBoxContainer/EleEnergyContainer/ElementalEnergy" to="." method="_on_elemental_energy_drag_ended"]
+[connection signal="drag_ended" from="CenterContainer/VBoxContainer/SuccessionStageContainer/SuccessionStage" to="." method="_on_succession_stage_drag_ended"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/startGame" to="." method="_on_start_game_pressed"]
