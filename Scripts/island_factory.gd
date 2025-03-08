@@ -8,6 +8,7 @@ func instantiateIsland():
 	add_child(instance)
 	randomiseIsland(instance)
 	print("added island with size", instance.getSize())
+	return instance
 
 func test():
 	print("hoi")
