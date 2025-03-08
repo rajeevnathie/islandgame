@@ -6,14 +6,8 @@ var island_factory = load("res://Scripts/island_factory.gd").new()
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	add_child(island_factory)
-	var island_instance = island_factory.instantiateIsland()
-	
-	var tree_manager_instance = tree_manager.instantiate()
-	tree_manager_instance.island_instance = island_instance
-	add_child(tree_manager_instance)
+	add_child(island_factory)	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
-

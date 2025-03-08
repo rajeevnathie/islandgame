@@ -1,7 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://c8t5jgrnreown"]
+[gd_scene load_steps=3 format=3 uid="uid://bda1tf02hcfwv"]
 
 [ext_resource type="Script" path="res://TreeManager.gd" id="1_gbhfb"]
-[ext_resource type="PackedScene" uid="uid://deavthrf7afex" path="res://Scenes/tree.tscn" id="2_1es1w"]
+[ext_resource type="PackedScene" uid="uid://biqpbecnkhth7" path="res://Scenes/tree.tscn" id="2_1es1w"]
 
 [node name="TreeManager" type="Node3D"]
 script = ExtResource("1_gbhfb")
