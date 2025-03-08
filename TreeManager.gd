@@ -24,7 +24,9 @@ func _process(delta: float) -> void:
 func place_trees_on_island():
 	if GlobalVariables.passed_time - last_tree_spawned_time >= 5:
 		print('Placing tree')
+		
 		last_tree_spawned_time = GlobalVariables.passed_time
+		
 		var x_pos = randf_range(-island_size.x / 2, island_size.x / 2)
 		var z_pos = randf_range(-island_size.z / 2, island_size.z / 2)
 		
