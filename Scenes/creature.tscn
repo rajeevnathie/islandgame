@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://ven5yfvkflie"]
+
+[ext_resource type="Script" path="res://Scripts/CreatureScripts/creature.gd" id="1_c2fbf"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_afsat"]
+
+[node name="Creature" type="Node3D"]
+script = ExtResource("1_c2fbf")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9894, 0)
+mesh = SubResource("CapsuleMesh_afsat")

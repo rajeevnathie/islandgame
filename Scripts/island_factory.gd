@@ -2,7 +2,7 @@ extends Node
 
 var npc_island = preload("res://Scenes/npc_island.tscn")
 var last_checked_time: int = 0
-var spawn_frequency: int = 10
+var spawn_frequency: int = 2
 
 
 func _process(delta: float) -> void:

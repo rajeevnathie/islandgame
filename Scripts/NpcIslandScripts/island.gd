@@ -10,6 +10,7 @@ class_name Island
 }
 @export var tree_manager : PackedScene
 
+var creature_factory = load("res://Scripts/CreatureScripts/creature_factory.gd")
 var rng = RandomNumberGenerator.new()
 
 #@export var climate : int
@@ -25,6 +26,11 @@ func _ready() -> void:
 	var tree_manager_instance = tree_manager.instantiate()
 	tree_manager_instance.island_instance = self
 	add_child(tree_manager_instance)
+	
+	var creature_factory_instance = creature_factory.new()
+	creature_factory_instance.island_instance = self
+	add_child(creature_factory_instance)
+
 
 #func _process(delta: float) -> void:
 	#print(self.get_children())
