@@ -16,4 +16,4 @@ func changeSize(size: Vector3):
 	islandFloorCollision.scale = size
 
 func getSize():
-	return [islandFloorMesh.scale, islandFloorCollision.scale]
+	return islandFloorMesh.scale

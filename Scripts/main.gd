@@ -1,6 +1,7 @@
 extends Node3D
 
 var npc_island = preload("res://Scenes/npc_island.tscn")
+@export var tree_manager : PackedScene
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -16,6 +17,9 @@ func instantiateIsland():
 	randomiseIsland(instance)
 	print("added island with size", instance.getSize())
 	
+	var tree_manager_instance = tree_manager.instantiate()
+	tree_manager_instance.island_instance = instance
+	add_child(tree_manager_instance)
 	
 func randomiseIsland(island : Island):
 	var rng = RandomNumberGenerator.new()
