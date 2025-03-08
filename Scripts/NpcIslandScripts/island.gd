@@ -10,6 +10,7 @@ class_name Island
 }
 @export var tree_manager : PackedScene
 
+var rng = RandomNumberGenerator.new()
 
 #@export var climate : int
 #@export var terrain : int
@@ -20,6 +21,7 @@ class_name Island
 #@export var successionStage : int
 
 func _ready() -> void:
+	randomiseIsland()
 	var tree_manager_instance = tree_manager.instantiate()
 	tree_manager_instance.island_instance = self
 	add_child(tree_manager_instance)
@@ -33,3 +35,15 @@ func changeSize(size: Vector3):
 
 func getSize():
 	return islandFloorMesh.scale
+	
+func randomiseIsland():
+	self.changeSize(randomiseIslandSize())
+	#other randomisations will be added in this func
+	self.position = randomiseIslandLoc()
+
+func randomiseIslandSize():
+	return Vector3(rng.randf_range(1.0, 10.0), 0.2, randf_range(1.0, 10.0))
+
+func randomiseIslandLoc():
+	#todo: check for collision on spawn
+	return Vector3(rng.randf_range(1.0, 100.0), 0, randf_range(1.0, 100.0))
